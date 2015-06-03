@@ -1,0 +1,12 @@
+= BC Studio
+
+Business site for goldman ventures company
+{BCStudio}[http://bcstudio.biz/]
+
+== Technology used:
+  - Ruby on Rails
+  - HTML
+  - CSS, Scss
+  - JavaScript, jQuery
+  - modernizr.js
+  - Bootstrap

@@ -1,0 +1,150 @@
+<div id="homepage_header">
+
+  <div class="otherpage_background" id="contact_background"></div>
+  <a href=<%= root_path %>><div id="logo"></div></a>
+  <div class="container otherpage_background_fix ">
+
+      
+  <!-- Logo -->
+    <!--<div id="logoText">-->
+      <!--<h1><a href=<%= root_path %>>BC Studio</a></h1>-->
+    <!--</div>-->
+  
+  <!-- Nav -->
+    <!--<nav id="nav">-->
+      <!--<ul>-->
+        <!--&lt;!&ndash; <li class="active"><a href="index.html">Homepage</a></li> &ndash;&gt;-->
+        <!--<li><%#= link_to "Graphic Design", home_design_path%></li>-->
+        <!--<li><%#= link_to "MKT Creatives", home_creatives_path%></li>-->
+        <!--<li><%#= link_to "Website", home_website_path%></li>-->
+        <!--<li><%#= link_to "Consultant", home_consultant_path%></li>-->
+        <!--<li class="active"><%= link_to "Contact", contacts_path%></li>-->
+      <!--</ul>-->
+    <!--</nav>-->
+  </div>
+</div>
+<nav id="navGorizontal">
+  <ul>
+    <!-- <li class="active"><a href="index.html">Homepage</a></li> -->
+    <li><%= link_to "Graphic Design", home_design_path%></li>
+    <li><%= link_to "Creative Marketing", home_creatives_path%></li>
+    <li><%= link_to "Web Design", home_website_path%></li>
+    <li><%= link_to "Consultant", home_consultant_path%></li>
+    <li class="active"><%= link_to "Contact", contacts_path%></li>
+  </ul>
+</nav>
+<div class="contacts-title">
+  <div class="container vcenter">
+    <div class="row">
+      <div class="col-sm-5 col-md-5 col-md-offset-1 ">Contact Us</div>
+      <div class="col-sm-5 col-md-5 hide-sm">Inquiry Form</div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-1 padding-tb-20" id="contacts-text">
+      <p>Please feel free to contact us or why not stay connected via our social networks.</p>
+      <p>
+        Your inquiries will be automatically sorted and delivered to the right location,
+        right department and right person. BC specialist will respond to your
+        inquiries within 24 hours.
+      </p><br/>
+
+      <p>
+        BC STUDIO: <br/><br/>
+
+        5800 Oakwood Dr Unit 1L<br/>
+        Lisle, IL 60532, USA.<br/><br/>
+      </p>
+      <div class="row" >
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <p>Tel USA:</p>
+        </div>
+        <div class="col-xs-9 col-sm-9 col-md-9">
+          <p>+ 1 312 9857969</p>
+        </div>
+      </div>
+      <div class="row" >
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <p>Tel Hungary:</p>
+        </div>
+        <div class="col-xs-9 col-sm-9 col-md-9">
+          <p>+ 36 30 4206508</p>
+        </div>
+      </div>
+      <div class="row" >
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <p>Tel Ukraine:</p>
+        </div>
+        <div class="col-xs-9 col-sm-9 col-md-9">
+          <p>+ 38 063 7531258</p>
+        </div>
+      </div>
+      <div class="row" >
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <p>Tel China:</p>
+        </div>
+        <div class="col-xs-9 col-sm-9 col-md-9">
+          <p>+ 86 13801096162</p>
+        </div>
+      </div>
+      </br>
+      <p>
+        <a href="mailto:info@bcstudio.biz">info@bcstudio.biz</a>
+      </p>
+    </div>
+	<div class="col-md-12 show-sm ">
+	  <h2 class="form-title">
+	    Inquiry Form
+	  </h2>
+	</div>
+    <!--<div class="contacts-title show-sm">-->
+	      <!--<div class="col-sm-11 col-md-11 col-md-offset-1 ">Inquiry Form</div>-->
+    <!--</div>-->
+
+    <div class="col-md-5" id="contacts">
+      <!-- <form class="form" method="post" action="" name="contact" id="contacts"> -->
+      <%= simple_form_for @contact, :html => {:class => 'form-horizontal', novalidate: false } do |f| %>
+        <fieldset>
+          <div class="form-group"> 
+            <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon3"><i class="fa fa-user"></i></span> 
+              <input class="string form-control" id="contact_name" name="contact[name]" placeholder="Name *" type="text" required>
+              <span class="form-control-feedback glyphicon"></span>
+            </div>              
+          </div>   
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon3"><i class="fa fa-envelope-o"></i></span>
+              <input class="string email form-control" id="contact_email" name="contact[email]" type="email" placeholder="Email *" required>
+              <span class="help-block"></span>
+              <span class="form-control-feedback glyphicon"></span>
+            </div>   
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon3"><i class="fa fa-book"></i></span>
+              <input class="string form-control" id="contact_subject" name="contact[subject]" placeholder="Subject" type="text" required>
+              <span class="form-control-feedback glyphicon"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon3"><i class="fa fa-pencil"></i></span>
+              <textarea class="text form-control" id="contact_message" name="contact[message]"rows="10" cols="40" placeholder="Input your message *" required></textarea>
+              <span class="form-control-feedback glyphicon"></span>
+            </div>
+          </div>
+          <div class= "hidden">
+            <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+          </div>
+          <div class="form-group"> 
+            <%= f.button :submit, 'Send Message', :class=> "btn btn-primary" %>
+            <button type="reset" id="cancel" class="btn btn-danger">Cancel</button> 
+          </div>
+        </fieldset>
+      <% end %>
+    </div>
+  </div> 
+</div>
